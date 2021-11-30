@@ -1,42 +1,45 @@
 import './App.css';
-import SMS from "./sms_chart/Chart.jsx"
-import Profit from "./profit_chart/profit"
+import React from "react"
+import SMS from "./Components/sms_chart/Chart.jsx"
+import Profit from "./Components/profit_chart/profit"
+import state from "./redux/state"
+import Search from './Components/searchCompany/Search';
+import Card from "./Components/card/Card"
+import Table from "./Components/ClientTable/ClientTable"
 
 function App() {
-  const state = [{
-      name:"Farma",
-      sended:[2500,2600,16900],
-      notSended: [156,280,190]
-  },]
+  let data = [{name:"Номад",budget:"8200",nps:"8"}]
 
-    let procent = "99%"
-    let cost = "265 478,03"
-    let profit = "202 317,75"
+
   return (
     <div className="App">
-      <div className="sms_info">
-      <div className="bar_statistics">
-         {
-          state.map((item)=>{
-            return <SMS sended={item.sended} failed={item.notSended}  />
-        
-          })
-      }
-      
-           </div>
-           <div className="text">
-              <h3 className="procent_of_sended">
-                  доставленных:{procent}
-              </h3>
-              <div className="cost_of_company"> 
-                 <h4> доход компании:{cost}</h4>
-                 <h4> расход компании:{profit}</h4>
-              </div>
-           </div>
+      <div className="app__wrapper">
+      <div className="search_form">
+        <Search companys={state.companys}/>
       </div>
-     <div className="profit_company">
-
-     </div>
+        
+           
+            <div className="text">
+         
+         <Card profit={state.infoAboutCompany.profit} cost={state.infoAboutCompany.cost} sended={state.infoAboutCompany.procent}/>
+       
+      </div>
+      <div className="bar_statistics">
+    {
+     state.companys.map((item)=>{
+       return <SMS sended={item.sended} failed={item.notSended}  />
+   
+     })
+ }
+ 
+      </div>
+      <div className="clientTable">
+          <Table columns={{name:"Имя Компании",budget:"Бюджет",nps:"Нпс"}} data={data}/>
+      </div>
+      </div>
+    
+      
+   
     </div>
   );
 }

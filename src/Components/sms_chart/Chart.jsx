@@ -9,7 +9,7 @@ const chartCompnent = (props) => {
         <div className={styles.wrapper}>
           <Bar   datasetIdKey='id'
   data={{
-    labels: ['megacom', 'o', 'beline'],
+    labels: ['MEGACOM', 'O', 'BELINE'],
     datasets: [
       
       {
