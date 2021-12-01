@@ -1,23 +1,49 @@
-
-
-
-.app__wrapper{
+.App{
+  max-width: 90%;
+  margin: 3% auto;
+  
+}
+li{
+  list-style-type: none;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+.search_bar{
+  margin: 0 auto;
+}
+.app_card{
+  margin-top: 15px;
+}
+.app__table{
+  max-width: 20%;
+  margin-left: 20px;
+}
+.about_company{
+  display: flex;
+}
+.app__content{
+  display: flex;
+}
+.app__statistics{
+  margin:  0 auto;
+}
+.about_company{
+  display: flex;
+}
+.about_company li{
+  padding: 0 15px;
+} 
+.content_statistic{
   display: flex;
   flex-direction: column;
 }
-
-.text{
-  width: 100%;
-  margin-top: 5%;
+.company_cost{
+  color: #E74C3C ;
 }
-.bar_statistics{
-  margin-left: 9%;
+.company_profit,.sended__messages{
+  color: #2ECC71;
 }
-.search_form{
-  margin-left: 40%;
-  margin-top: 5%;
-  width: 100%;
-}
-.clientTable{
-  margin-top: 45%;
-}
+/*table styles*/

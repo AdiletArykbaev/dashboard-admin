@@ -9,8 +9,8 @@ function ClientTable({ columns, data }) {
   
 
   return (
-      <div>
- <table id="customers">
+      <div className={styles.tableWrapper}>
+ <table className={styles.customers} id="customers">
     <tr>
       <th>{columns.name}</th>
       <th>{columns.budget}</th>

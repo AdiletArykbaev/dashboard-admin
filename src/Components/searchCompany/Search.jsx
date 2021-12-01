@@ -11,7 +11,9 @@ const search = (props) => {
         <div>
          <FormControl className={styles.formControl}>
              <NativeSelect className={styles.companyCounter}>
-                <option value="Farma">Farma</option>
+                {props.map((item)=>{
+                        return {item}
+                })}
                 <option value="Optima">Optima</option>
              </NativeSelect>
    
