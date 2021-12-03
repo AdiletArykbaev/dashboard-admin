@@ -4,17 +4,21 @@ import styles from "./styles.module.css"
 
 
 
-const search = (props) => {
 
-  
+const Search = ({names}) => {
+   
     return (
+       
+    
         <div>
          <FormControl className={styles.formControl}>
              <NativeSelect className={styles.companyCounter}>
-                {props.map((item)=>{
-                        return {item}
+               <option value="global">Общая информация</option>
+
+                {names.map((item)=>{
+                        return  <option value="Optima">{item}</option>
                 })}
-                <option value="Optima">Optima</option>
+               
              </NativeSelect>
    
 
@@ -24,4 +28,4 @@ const search = (props) => {
 }
 
 
-export default search
+export default Search

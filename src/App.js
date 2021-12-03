@@ -6,6 +6,7 @@ import Search from "./Components/searchCompany/Search";
 import Table from "./Components/ClientTable/ClientTable";
 
 function App() {
+  
   let data = [
     { name: "Номад", budget: "8200", nps: "8" },
     { name: "Народный", budget: "20000", nps: "9" },
@@ -20,7 +21,6 @@ function App() {
   let names = data.map((item)=>{
     return item.name
   })
-  console.log(names)
   return (
     <div className="App">
       <header>

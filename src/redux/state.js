@@ -1,8 +1,8 @@
 const state = {
     companys:[{
         name:"Farma",
-        sended:[2500,2600,16900],
-        notSended: [156,280,190]
+        sended:[165956,130718,85008],
+        notSended: [10,7,5]
     }],
     infoAboutCompany:{
         profit:265478.03,
